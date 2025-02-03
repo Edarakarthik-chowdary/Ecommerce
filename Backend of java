@@ -1,0 +1,102 @@
+//Entity
+package com.example.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="emp")
+public class Employee {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="emp_id")	
+	private Integer empId;
+	
+	@Column(name="emp_name")	
+	private String empName;
+	
+	@Column(name="emp_job")	
+	private String empJob;
+	
+	@Column(name="emp_salary")	
+	private Double empSalary;
+	
+	@Column(name="emp_dept_name")	
+	private String empDeptName;
+	
+	@Column(name="emp_age")	
+	private Integer empAge;
+	
+	@Column(name="emp_gender")	
+	private String empGender;
+
+	public Integer getEmpId() {
+		return empId;
+	}
+
+	public void setEmpId(Integer empId) {
+		this.empId = empId;
+	}
+
+	public String getEmpName() {
+		return empName;
+	}
+
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+
+	public String getEmpJob() {
+		return empJob;
+	}
+
+	public void setEmpJob(String empJob) {
+		this.empJob = empJob;
+	}
+
+	public Double getEmpSalary() {
+		return empSalary;
+	}
+
+	public void setEmpSalary(Double empSalary) {
+		this.empSalary = empSalary;
+	}
+
+	public String getEmpDeptName() {
+		return empDeptName;
+	}
+
+	public void setEmpDeptName(String empDeptName) {
+		this.empDeptName = empDeptName;
+	}
+
+	public Integer getEmpAge() {
+		return empAge;
+	}
+
+	public void setEmpAge(Integer empAge) {
+		this.empAge = empAge;
+	}
+
+	public String getEmpGender() {
+		return empGender;
+	}
+
+	public void setEmpGender(String empGender) {
+		this.empGender = empGender;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [empId=" + empId + ", empName=" + empName + ", empJob=" + empJob + ", empSalary=" + empSalary
+				+ ", empDeptName=" + empDeptName + ", empAge=" + empAge + ", empGender=" + empGender + "]";
+	}
+
+	
+
+
+}
